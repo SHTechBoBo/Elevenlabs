@@ -10,10 +10,10 @@ from elevenlabs.conversational_ai.default_audio_interface import DefaultAudioInt
 def main():
     
     
-    def log_message(parameters):
-        message = parameters.get("message")
-        print(message)
-        return message
+    # def log_message(parameters):
+    #     message = parameters.get("message")
+    #     print(message)
+    #     return message
     
     # def get_student_details():
     #     # Fetch customer details (e.g., from an API or database)
@@ -51,7 +51,7 @@ def main():
         requires_auth=bool(API_KEY),
         audio_interface=DefaultAudioInterface(),
         callback_agent_response=lambda response: print(f"Agent: {response}"),
-        callback_agent_response_correction=lambda original, corrected: print(f"Agent: {original} -> {corrected}"),
+        # callback_agent_response_correction=lambda original, corrected: print(f"Agent: {original} -> {corrected}"),
         callback_user_transcript=lambda transcript: print(f"User: {transcript}"),
         # callback_latency_measurement=lambda latency: print(f"Latency: {latency}ms"),
     )
